@@ -9,7 +9,7 @@ RUN \
 	curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" |      \
 	apt-key add                                                                                                     && \
 	apt update                                                                                                      && \
-	apt install -o APT::Install-Suggests=0 -o APT::Install-Recommends=0 -y -q sbt		                        && \
+	apt install -o APT::Install-Suggests=0 -o APT::Install-Recommends=0 -y -q sbt wget gnupg apt-transport-https git bzip2 rpm build-essential fakeroot devscripts		                        && \
 	echo 'dash dash/sh select false' | debconf-set-selections							&& \
 	dpkg-reconfigure dash								 				&& \
 	rm -rf /var/lib/apt/lists
