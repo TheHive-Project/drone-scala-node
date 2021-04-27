@@ -15,7 +15,7 @@ RUN \
 	rm -rf /var/lib/apt/lists
 
 RUN \
-	wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash				&& \
+	wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash				&& \
 	. ~/.nvm/nvm.sh								 					&& \
 	nvm install --lts												&& \
 	npm install -g grunt bower                                                                                      && \
